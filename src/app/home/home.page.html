@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-split-pane>
+        <ion-router-outlet main >
+            <div >
+               
+                <ion-grid style="position: relative;
+                z-index: 1500;
+                ">
+                    <ion-row>
+                    
+                      <ion-col size="12">
+                 
+                        <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+                          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)" (ionSlideTouchStart)="touchstart($event)" (touchmove)="drag($event)" (touchstart)="dragstart($event);" (touchend)="dragend($event);">
+                          <ion-slide *ngFor="let s of sliderOne.slidesItems">
+                            <img src="assets/{{s.image}}.png">
+                          </ion-slide>
+                        </ion-slides>
+                 
+                      </ion-col>
+                    
+                    </ion-row>
+                  </ion-grid>
+                        </div>
+          
+          <div class="wheel" (touchstart)="dragstart($event);" (touchend)="dragend($event);" (touchmove)="drag($event)">
+            <div id="ionic-wheel" ng-transclude="">
+              <div class="circle" [routerDirection]="'root'" routerLink="/page1" >  <ion-img [src]="iconurl"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page2"><ion-img [src]="iconurl1"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page3"><ion-img [src]="iconurl2"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page4"><ion-img [src]="iconurl3"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page5"><ion-img [src]="iconurl4"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page6"><ion-img [src]="iconurl5"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page7"><ion-img [src]="iconurl6"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page8"><ion-img [src]="iconurl7"></ion-img></div>
+               <div class="circle" [routerDirection]="'root'" routerLink="/page8"><ion-img [src]="iconurl8"></ion-img></div>
+               <div class="circle" [routerDirection]="'root'" routerLink="/page8"><ion-img [src]="iconurl9"></ion-img></div>
+               <div class="circle" [routerDirection]="'root'" routerLink="/page1" ><ion-img [src]="iconurl10"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page2"><ion-img [src]="iconurl11"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page3"><ion-img [src]="iconurl12"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page4"><ion-img [src]="iconurl13"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page5"><ion-img [src]="iconurl14"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page6"><ion-img [src]="iconurl15"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page7"><ion-img [src]="iconurl16"></ion-img></div>
+              <div class="circle" [routerDirection]="'root'" routerLink="/page8"><ion-img [src]="iconurl17"></ion-img></div>
+               <div class="circle" [routerDirection]="'root'" routerLink="/page8"><ion-img [src]="iconurl18"></ion-img></div>
+               <div class="circle" [routerDirection]="'root'" routerLink="/page8"><ion-img [src]="iconurl19"></ion-img></div>
+              
+            </div>
+          </div>
+    
+        </ion-router-outlet>
+      </ion-split-pane>
+</ion-content>
