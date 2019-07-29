@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 import { IonInput, IonList, IonSlides } from '@ionic/angular';
 import { nearer } from 'q';
@@ -72,7 +73,9 @@ export class HomePage {
   circleIndex: number;
 
  
-  constructor() {
+  constructor(
+    private navCtrl: NavController
+  ) {
 
     this.sliderOne =
     {
@@ -1781,5 +1784,7 @@ export class HomePage {
 
   }
 
-  
+  goToSearch() {
+    this.navCtrl.navigateRoot('/search');
+  }
 }

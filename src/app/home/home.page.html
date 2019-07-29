@@ -1,12 +1,10 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      
-    </ion-title>
-  </ion-toolbar>
+      <ion-buttons slot="end" (click)="goToSearch()">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-buttons>
+    
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -31,8 +29,17 @@
                       </ion-col>
                     
                     </ion-row>
-                  </ion-grid>
-                        </div>
+                </ion-grid>
+            </div>
+
+            <ion-card>
+              <img src="../../assets/listen_live.png">
+            </ion-card>
+            <ion-card>
+              <img src="../../assets/radiok.png">
+            </ion-card>
+
+                        
           
           <div class="wheel" (touchstart)="dragstart($event);" (touchend)="dragend($event);" (touchmove)="drag($event)">
             <div id="ionic-wheel" ng-transclude="">
