@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ViewChild } from '@angular/core';
 import { IonInput, IonList, IonSlides } from '@ionic/angular';
+import { PodcastService } from './services/podcast.service';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private podcastService: PodcastService
   ) {
     this.initializeApp();
    
@@ -30,6 +32,8 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  
   
  
  
